@@ -1,0 +1,25 @@
+<?jelly allow-by-default='true' ?>
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
+    <t:summary icon="notepad.png">
+        <div>
+            <a href="codecoverage/">View msCode Coverage Results</a>
+            <br/>
+            <a href="${it.reportUrl}"> Download ms-Code Coverage Report </a>
+        </div>
+        <div style="display: none;">
+            <h3>Code coverage results</h3>
+            <table>
+                <tr>
+                    <th>class name</th>
+                    <th>coverage percentage</th>
+                </tr>
+                <j:forEach var="entry" items="${it.fileCoveragePercentagesSet}">
+                    <tr>
+                        <td>${entry.key}</td>
+                        <td>${entry.value}</td>
+                    </tr>
+                </j:forEach>
+            </table>
+        </div>
+    </t:summary>
+</j:jelly>

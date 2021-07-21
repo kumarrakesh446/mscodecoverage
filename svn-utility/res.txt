@@ -1,0 +1,16 @@
+ Volume in drive D is New Volume
+ Volume Serial Number is 166E-3CC7
+
+ Directory of D:\JENKINS-PLUGIN\mscodecoverageplugin\svn-utility
+
+02/08/2018  11:36 AM    <DIR>          .
+02/08/2018  11:36 AM    <DIR>          ..
+10/23/2017  12:37 PM               641 pom.xml
+02/08/2018  11:36 AM                 0 res.txt
+02/08/2018  11:37 AM                21 run-git-command.bat
+01/23/2018  09:41 AM                21 run-git-command.sh
+10/23/2017  12:39 PM    <DIR>          src
+10/23/2017  02:11 PM            19,182 svn-utility.iml
+01/23/2018  09:48 AM    <DIR>          target
+               5 File(s)         19,865 bytes
+               4 Dir(s)  19,543,625,728 bytes free

@@ -1,0 +1,23 @@
+<?jelly escape-by-default='true' ?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
+    <st:contentType value="text/html;charset=UTF-8"/>
+    <l:layout title="Code coverage results" css="/plugin/mscodecoverage-plugin/css/style.css">
+        <script type="text/javascript" src="${rootURL}/plugin/mscodecoverage-plugin/js/index.js"></script>
+        <l:main-panel>
+        <table>
+            <tr>
+                <th>Story IDs</th>
+                <th>Class Name</th>
+                <th>Coverage Percentage</th>
+            </tr>
+            <j:forEach var="entry" items="${it.fileCoveragePercentagesSet}">
+                <tr>
+                    <td style="color:${entry.value.coveragePercent > 80 ? 'green': 'red'};">${it.formatStoryIds(entry.value)}</td>
+                    <td style="color:${entry.value.coveragePercent > 80 ? 'green': 'red'};">${it.formatFilename(entry.key)}</td>
+                    <td style="color:${entry.value.coveragePercent > 80 ? 'green': 'red'};">${it.formatCoveragePercentage(entry.value)}</td>
+                </tr>
+            </j:forEach>
+        </table>
+        </l:main-panel>
+    </l:layout>
+</j:jelly>
